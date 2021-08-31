@@ -15,5 +15,11 @@ func main() {
 			"message": "Hello World",
 		})
 	})
+
+	r.POST("/login", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"status": "ok",
+		})
+	})
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
